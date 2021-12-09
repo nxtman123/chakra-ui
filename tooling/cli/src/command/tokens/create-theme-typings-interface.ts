@@ -6,7 +6,6 @@ import {
 } from "./extract-component-types"
 import { extractColorSchemeTypes } from "./extract-color-schemes"
 import { extractPropertyKeys } from "./extract-property-keys"
-import { formatWithPrettierIfAvailable } from "../../utils/format-with-prettier"
 
 export interface ThemeKeyOptions {
   /**
@@ -68,16 +67,13 @@ export async function createThemeTypingsInterface(
   const colorSchemes = extractColorSchemeTypes(theme)
   const componentTypes = extractComponentTypes(theme)
 
-  const template =
-    // language=ts
-    `// regenerate by running
+  // language=ts
+  return `// regenerate by running
 // npx @chakra-ui/cli tokens path/to/your/theme.(js|ts)
 export interface ThemeTypings {
-  ${printUnionMap({ ...unions, textStyles, layerStyles, colorSchemes })}
-  ${printComponentTypes(componentTypes)}
+${printUnionMap({ ...unions, textStyles, layerStyles, colorSchemes }, 2)}
+${printComponentTypes(componentTypes, 2)}
 }
 
 `
-
-  return formatWithPrettierIfAvailable(template)
 }

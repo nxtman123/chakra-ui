@@ -16,10 +16,16 @@ function printUnionType(values: string[]) {
  * @example
  * { colors: ['red.500', 'green.500'] } => `colors: "red.500" | "green.500"`
  */
-export function printUnionMap(unions: Record<string, string[]>) {
+export function printUnionMap(
+  unions: Record<string, string[]>,
+  preWhiteSpace = 0,
+) {
   return Object.entries(unions)
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([targetKey, union]) => `${targetKey}: ${printUnionType(union)};`)
+    .map(
+      ([targetKey, union]) =>
+        `${" ".repeat(preWhiteSpace)}${targetKey}: ${printUnionType(union)};`,
+    )
     .join("\n")
 }
 

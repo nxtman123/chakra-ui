@@ -86,43 +86,35 @@ describe("Theme typings", () => {
       "// regenerate by running
       // npx @chakra-ui/cli tokens path/to/your/theme.(js|ts)
       export interface ThemeTypings {
-        borders: \\"sm\\" | \\"md\\"
-        breakpoints: \\"sm\\" | \\"md\\"
-        colors:
-          | \\"niceColor\\"
-          | \\"suchWowColor\\"
-          | \\"onlyColorSchemeColor.50\\"
-          | \\"onlyColorSchemeColor.100\\"
-          | \\"onlyColorSchemeColor.200\\"
-          | \\"onlyColorSchemeColor.300\\"
-          | \\"onlyColorSchemeColor.400\\"
-          | \\"onlyColorSchemeColor.500\\"
-          | \\"onlyColorSchemeColor.600\\"
-          | \\"onlyColorSchemeColor.700\\"
-          | \\"onlyColorSchemeColor.800\\"
-          | \\"onlyColorSchemeColor.900\\"
-          | \\"such.deep.color\\"
-        colorSchemes: \\"onlyColorSchemeColor\\"
-        fonts: \\"sm\\" | \\"md\\"
-        fontSizes: \\"sm\\" | \\"md\\"
-        fontWeights: \\"sm\\" | \\"md\\"
-        layerStyles: \\"red\\" | \\"blue\\"
-        letterSpacings: \\"sm\\" | \\"md\\"
-        lineHeights: \\"sm\\" | \\"md\\"
-        radii: \\"sm\\" | \\"md\\"
-        shadows: \\"sm\\" | \\"md\\"
-        sizes: \\"sm\\" | \\"md\\"
-        space: \\"sm\\" | \\"-sm\\" | \\"md\\" | \\"-md\\"
-        textStyles: \\"small\\" | \\"large\\"
-        transition: \\"sm\\" | \\"md\\"
-        zIndices: \\"sm\\" | \\"md\\"
+        blur: never;
+        borders: \\"sm\\" | \\"md\\";
+        borderStyles: never;
+        borderWidths: never;
+        breakpoints: \\"sm\\" | \\"md\\";
+        colors: \\"niceColor\\" | \\"suchWowColor\\" | \\"onlyColorSchemeColor.50\\" | \\"onlyColorSchemeColor.100\\" | \\"onlyColorSchemeColor.200\\" | \\"onlyColorSchemeColor.300\\" | \\"onlyColorSchemeColor.400\\" | \\"onlyColorSchemeColor.500\\" | \\"onlyColorSchemeColor.600\\" | \\"onlyColorSchemeColor.700\\" | \\"onlyColorSchemeColor.800\\" | \\"onlyColorSchemeColor.900\\" | \\"such.deep.color\\";
+        colorSchemes: \\"onlyColorSchemeColor\\";
+        fonts: \\"sm\\" | \\"md\\";
+        fontSizes: \\"sm\\" | \\"md\\";
+        fontWeights: \\"sm\\" | \\"md\\";
+        layerStyles: \\"red\\" | \\"blue\\";
+        letterSpacings: \\"sm\\" | \\"md\\";
+        lineHeights: \\"sm\\" | \\"md\\";
+        radii: \\"sm\\" | \\"md\\";
+        shadows: \\"sm\\" | \\"md\\";
+        sizes: \\"sm\\" | \\"md\\";
+        space: \\"sm\\" | \\"-sm\\" | \\"md\\" | \\"-md\\";
+        textStyles: \\"small\\" | \\"large\\";
+        transition: \\"sm\\" | \\"md\\";
+        zIndices: \\"sm\\" | \\"md\\";
         components: {
           Button: {
-            sizes: \\"sm\\"
-            variants: \\"extraordinary\\" | \\"awesome\\" | \\"unused\\"
-          }
-        }
+            sizes: \\"sm\\";
+            variants: \\"extraordinary\\" | \\"awesome\\" | \\"unused\\";
+          }  
+         }
+
       }
+
       "
     `)
   })
@@ -138,25 +130,32 @@ describe("Theme typings", () => {
       "// regenerate by running
       // npx @chakra-ui/cli tokens path/to/your/theme.(js|ts)
       export interface ThemeTypings {
-        borders: never
-        breakpoints: never
-        colors: never
-        colorSchemes: never
-        fonts: never
-        fontSizes: never
-        fontWeights: never
-        layerStyles: never
-        letterSpacings: never
-        lineHeights: never
-        radii: never
-        shadows: never
-        sizes: never
-        space: never
-        textStyles: never
-        transition: never
-        zIndices: never
-        components: {}
+        blur: never;
+        borders: never;
+        borderStyles: never;
+        borderWidths: never;
+        breakpoints: never;
+        colors: never;
+        colorSchemes: never;
+        fonts: never;
+        fontSizes: never;
+        fontWeights: never;
+        layerStyles: never;
+        letterSpacings: never;
+        lineHeights: never;
+        radii: never;
+        shadows: never;
+        sizes: never;
+        space: never;
+        textStyles: never;
+        transition: never;
+        zIndices: never;
+        components: {
+        
+         }
+
       }
+
       "
     `)
   })
